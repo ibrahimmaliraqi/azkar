@@ -1,0 +1,851 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Naskh+Arabic:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #34495E;
+    --accent-color: #16A085;
+    --light-bg: #F8FAFC;
+    --text-color: #2C3E50;
+}
+
+body {
+    font-family: 'Amiri', 'Traditional Arabic', serif;
+    background-color: #f8f9fa;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(135deg, #1e4d4f 0%, #156164 100%) !important;
+    padding: 1rem 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand,
+.nav-link {
+    color: #fff !important;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, rgba(30, 77, 79, 0.08) 0%, rgba(21, 97, 100, 0.05) 100%);
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before,
+.hero-section::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(30, 77, 79, 0.1) 0%, rgba(30, 77, 79, 0) 70%);
+}
+
+.hero-section::before {
+    top: -100px;
+    right: -100px;
+}
+
+.hero-section::after {
+    bottom: -100px;
+    left: -100px;
+}
+
+.bismillah {
+    font-size: 3rem;
+    background: linear-gradient(135deg, #1e4d4f 0%, #156164 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    margin: 0;
+    padding: 0;
+}
+
+/* Hadith Card */
+.hadith-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    margin: 1rem 0;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.hadith-card::before {
+    content: '❝';
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 4rem;
+    color: rgba(30, 77, 79, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.hadith-card:hover {
+    transform: translateY(-5px);
+}
+
+.hadith-card h2 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.hadith-text {
+    font-size: 1.8rem;
+    line-height: 2.2;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.narrator,
+.source {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.hadith-info {
+    border-top: 1px solid rgba(30, 77, 79, 0.1);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.narrator {
+    color: #1e4d4f;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.source {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Feature Cards */
+.feature-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #1e4d4f 0%, #156164 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.feature-card:hover::after {
+    opacity: 1;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 35px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+    font-size: 3.5rem;
+    color: #1e4d4f;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+.feature-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.feature-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.features-section {
+    padding: 3rem 0;
+}
+
+/* Athkar Cards */
+.athkar-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.athkar-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+.thikr-text {
+    font-size: 1.3rem;
+    line-height: 2;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.thikr-info {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.count-badge {
+    background: #1e4d4f;
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.description {
+    color: #666;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.category-select-wrapper {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-select-lg {
+    border-color: #1e4d4f;
+    color: #1e4d4f;
+    font-size: 1.1rem;
+}
+
+.form-select-lg:focus {
+    border-color: #156164;
+    box-shadow: 0 0 0 0.25rem rgba(30, 77, 79, 0.25);
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    background-color: #e9ecef;
+}
+
+.progress-bar {
+    background-color: #1e4d4f;
+    transition: width 0.3s ease;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.count-badge {
+    margin: 1rem 0;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #1e4d4f;
+    border-color: #1e4d4f;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #156164;
+    border-color: #156164;
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: #1e4d4f;
+    border-color: #1e4d4f;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #1e4d4f;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Tasbih Counter */
+.tasbih-count {
+    font-size: 4rem;
+    color: var(--accent-color);
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#tasbih-button {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    background: var(--accent-color);
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#tasbih-button:active {
+    transform: scale(0.95);
+}
+
+/* Enhanced Tasbih Styles */
+.tasbih-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+}
+
+.btn-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-circle:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.current-dhikr {
+    font-size: 1.5rem;
+    color: #1e4d4f;
+    margin-bottom: 1rem;
+    min-height: 40px;
+}
+
+.counter-info {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.saved-counts {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: rgba(30, 77, 79, 0.05);
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+.target-count-wrapper {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#custom-count, #dhikr-text {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.tasbih-display {
+    background: rgba(30, 77, 79, 0.05);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+}
+
+.progress {
+    max-width: 300px;
+    margin: 1rem auto;
+    height: 8px !important;
+    background-color: rgba(30, 77, 79, 0.1);
+}
+
+.progress-bar {
+    background-color: #1e4d4f;
+}
+
+.badge {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Form Control Enhancements */
+.form-select-lg {
+    border: 2px solid rgba(30, 77, 79, 0.2);
+    border-radius: 10px;
+}
+
+.form-select-lg:focus {
+    border-color: #1e4d4f;
+    box-shadow: 0 0 0 0.25rem rgba(30, 77, 79, 0.1);
+}
+
+/* Animation for count change */
+@keyframes countChange {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.tasbih-count {
+    animation: countChange 0.3s ease-out;
+}
+
+/* Footer */
+footer {
+    background: #f8f9fa;
+    color: white;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, #1e4d4f, transparent);
+    margin: 1rem auto 2rem;
+    width: 80%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bismillah {
+        font-size: 2.2rem;
+    }
+
+    .hadith-text {
+        font-size: 1.4rem;
+        line-height: 2;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+    }
+
+    .hadith-card {
+        margin-top: -3rem;
+        padding: 1.5rem;
+    }
+
+    .btn-circle {
+        width: 100px;
+        height: 100px;
+        font-size: 1.5rem;
+    }
+    
+    .current-dhikr {
+        font-size: 1.2rem;
+    }
+    
+    .tasbih-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feature-card,
+.hadith-card {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Loading Spinner */
+.spinner-border {
+    color: #1e4d4f;
+    width: 3rem;
+    height: 3rem;
+}
+
+.mb-0 {
+    color: #000;
+}
+
+/* Enhanced Hadith Section */
+.hadith-section {
+    padding: 2rem 0;
+    position: relative;
+}
+
+.section-header h2 {
+    color: #1e4d4f;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-header i {
+    margin-left: 0.5rem;
+    color: #1e4d4f;
+}
+
+/* Athkar Stack Styles */
+.athkar-stack-container {
+    background: #fff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    min-height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.athkar-stack-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1e4d4f 0%, #156164 100%);
+    border-radius: 4px 4px 0 0;
+}
+
+.current-dhikr-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.current-dhikr-stack:empty::before {
+    content: 'اختر ذكراً للبدء';
+    display: block;
+    text-align: center;
+    color: #666;
+    padding: 2rem;
+    font-style: italic;
+}
+
+.stack-item {
+    background: linear-gradient(135deg, rgba(30, 77, 79, 0.05) 0%, rgba(21, 97, 100, 0.08) 100%);
+    padding: 1rem;
+    border-radius: 10px;
+    transform-origin: center;
+    animation: slideIn 0.3s ease-out;
+    border: 1px solid rgba(30, 77, 79, 0.1);
+    transform-origin: top;
+    transition: all 0.3s ease;
+}
+
+.stack-item:not(:first-child) {
+    margin-top: -10px;
+    opacity: 0.8;
+    transform: scale(0.98);
+}
+
+.stack-item:not(:first-child):hover {
+    opacity: 1;
+    transform: scale(1);
+    margin-top: 0;
+}
+
+.stack-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.stack-text {
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #2c3e50;
+}
+
+.stack-progress {
+    width: 150px;
+}
+
+.stack-item .progress {
+    height: 8px;
+    margin: 0;
+    width: 100%;
+}
+
+.btn-counter {
+    background: #1e4d4f;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-counter:hover {
+    background: #156164;
+    color: white;
+    transform: scale(1.1);
+}
+
+.btn-counter:active {
+    transform: scale(0.95);
+}
+
+.btn-counter::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.btn-counter:active::after {
+    opacity: 1;
+}
+
+.completed-dhikr-count {
+    transition: all 0.3s ease;
+}
+
+.completed-dhikr-count .badge {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #1e4d4f 0%, #156164 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.completed-dhikr-count .badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
+    animation: shimmer 2s infinite;
+}
+
+.stack-item.completed {
+    animation: fadeOut 0.5s ease-out forwards;
+}
+
+.athkar-card.active {
+    opacity: 0.6;
+    pointer-events: none;
+    position: relative;
+}
+
+.athkar-card.active::before {
+    content: 'جاري التسبيح';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+    background: rgba(30, 77, 79, 0.9);
+    color: white;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+    font-size: 0.9rem;
+}
+
+.completed-dhikr-count .badge {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #1e4d4f 0%, #156164 100%);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+/* Enhanced Stack Animations */
+@keyframes completeGlow {
+    0% {
+        box-shadow: 0 0 0 rgba(30, 77, 79, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(30, 77, 79, 0.4);
+        background: linear-gradient(135deg, rgba(30, 77, 79, 0.1) 0%, rgba(21, 97, 100, 0.15) 100%);
+    }
+    100% {
+        box-shadow: 0 0 0 rgba(30, 77, 79, 0.2);
+    }
+}
+
+@keyframes slideOutRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+/* Progress bar animation */
+.progress-bar {
+    background: linear-gradient(90deg, #1e4d4f 0%, #156164 100%);
+    background-size: 200% 100%;
+    animation: gradientMove 2s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+/* Responsive adjustments for stack */
+@media (max-width: 768px) {
+    .stack-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .stack-text {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .stack-progress {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Progress animation */
+.progress-bar {
+    transition: width 0.3s ease-in-out;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
